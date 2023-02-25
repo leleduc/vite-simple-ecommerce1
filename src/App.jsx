@@ -1,9 +1,24 @@
+import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
+import Hero from './components/hero/Hero';
+import Products from './components/products/Products';
+import Slider from './components/slider/Slider';
+import Testimonials from './components/testimonials/Testimonials';
+import Virtual from './components/virtual/Virtual';
 import './styles/App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Header />
+      <Hero />
+      <Slider />
+      <Virtual />
+      <Products />
+      <Testimonials />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;

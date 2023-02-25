@@ -1,0 +1,56 @@
+.container {
+  // background: rgb(148, 125, 125);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //   position: relative;
+  width: 100%;
+  //   height: 12rem;
+
+  .wrapper {
+    
+    width: 70%;
+    height: 12rem;
+    position: unset;
+  }
+
+  .sLeft {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .sLeft > :nth-child(2) {
+    font-weight: bold;
+    font-style: 2rem;
+  }
+
+  .sName {
+    display: flex;
+    flex-direction: column;
+  }
+  .sName > :nth-child(1) {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .sLeft > :nth-child(2) {
+    font-weight: bold;
+    font-style: 2rem;
+  }
+  .sLeft > :nth-child(3) {
+    font-size: 0.6rem;
+    border: 1px solid var(--black);
+    padding: 5px 10px;
+    width: max-content;
+    border: 15px;
+  }
+
+  .sImage {
+    transform: rotate(-20deg);
+    position: absolute;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    bottom: -20%;
+  }
+}
