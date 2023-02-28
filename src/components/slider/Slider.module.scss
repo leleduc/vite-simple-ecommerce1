@@ -1,17 +1,26 @@
+@import '../../styles/contants.scss';
+
 .container {
-  // background: rgb(148, 125, 125);
   display: flex;
   align-items: center;
   justify-content: center;
-  //   position: relative;
   width: 100%;
-  //   height: 12rem;
 
   .wrapper {
-    
+    @media screen and (max-width: $md) {
+      width: 80%;
+      height: 10rem;
+
+    }
     width: 70%;
     height: 12rem;
     position: unset;
+  }
+
+  .swiperButton {
+    @media screen and (max-width: $md) {
+      display: none;
+    }
   }
 
   .sLeft {

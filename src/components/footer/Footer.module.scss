@@ -1,3 +1,5 @@
+@import '../../styles/contants.scss';
+
 .container {
   width: 100%;
   margin-top: 5rem;
@@ -10,11 +12,23 @@
     margin-top: 1rem;
   }
   .wrapper {
+    @media screen and (max-width: $md) {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      font-size: 1.7rem;
+      gap: 2rem;
+      text-align: justify;
+    }
+
     display: flex;
     width: 100%;
     justify-content: space-around;
 
     .logo {
+      @media screen and (max-width: $md) {
+        display: none;
+      }
       display: flex;
       align-items: flex-start;
       gap: 1rem;

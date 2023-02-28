@@ -41,6 +41,11 @@ const Slider = () => {
             depth: 100,
             modifier: 2.5,
           }}
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
+            720: { slidesPerView: 3 },
+          }}
           className="swiper_container"
         >
           {SliderProducts.map((slide, i) => (
@@ -58,8 +63,12 @@ const Slider = () => {
           ))}
 
           <div className="slider-controler">
-            <div className="swiper-button-prev slider-arraw"></div>
-            <div className="swiper-button-next slider-arraw"></div>
+            <div
+              className={`swiper-button-prev slider-arraw ${css.swiperButton}`}
+            ></div>
+            <div
+              className={`swiper-button-next slider-arraw ${css.swiperButton}`}
+            ></div>
             <div className="swiper-pagination"></div>
           </div>
         </Swiper>

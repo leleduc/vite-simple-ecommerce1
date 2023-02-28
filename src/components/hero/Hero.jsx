@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <div className={css.container}>
       {/* Left side */}
-      <div className={css.h_sides}>
+      <div className={css.leftSide}>
         <span className={css.text1}>skin protection cream</span>
 
         <div className={css.text2}>
@@ -61,7 +61,7 @@ const Hero = () => {
       </div>
 
       {/* Right side */}
-      <div className={css.h_sides}>
+      <div className={css.rightSide}>
         <div className={css.traffic}>
           <span>1.5m</span>
           <span>Monthly Traffic</span>

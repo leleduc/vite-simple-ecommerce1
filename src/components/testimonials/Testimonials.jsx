@@ -48,6 +48,11 @@ const Testimonials = () => {
           slidesPerGroup={1}
           spaceBetween={20}
           className={css.swiperTestimonials}
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
+            820: { slidesPerView: 3 },
+          }}
         >
           {TestimonialsData.map((testimonial, i) => (
             <SwiperSlide>

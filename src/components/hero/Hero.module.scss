@@ -1,15 +1,71 @@
+@import '../../styles/contants.scss';
+
 .container {
+  @media screen and (max-width: $md) {
+    grid-template-areas: 'left center center' 'right right right';
+  }
   padding: 0rem 2rem; /* top and bottom auto | left and right 2rem */
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: 'left center center center right';
+
+  .leftSide {
+    grid-area: left;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    .text1 {
+      @media screen and (max-width: $md) {
+        font-size: 0.9rem;
+        text-align: justify;
+      }
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      width: min-content;
+      display: block;
+      font-weight: 800;
+    }
+    .text2 {
+      @media screen and (max-width: $md) {
+        font-size: 0.9rem;
+        text-align: justify;
+      }
+      display: flex;
+      flex-direction: column;
+      width: min-content;
+    }
+    .text2 > :first-child {
+      @media screen and (max-width: $sm) {
+        font-size: 0.9rem;
+      }
+      @media screen and (max-width: $md) {
+        font-size: 1.5rem;
+        text-align: left;
+      }
+      text-transform: capitalize;
+      font-weight: 800;
+      font-size: 2.5rem;
+    }
+    .text2 > :nth-child(2) {
+      display: block;
+    }
+  }
 
   .wrapper {
+    grid-area: center;
     display: flex;
     align-items: baseline;
     justify-content: center;
     position: relative;
 
     .blueCircle {
+      @media screen and (max-width: $sm) {
+        width: 100%;
+        height: 50%;
+      }
+      @media screen and (max-width: $md) {
+        width: 70%;
+        height: 70%;
+      }
       width: 30rem;
       height: 30rem;
       border-radius: 50%;
@@ -19,7 +75,26 @@
       background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
     }
 
+    img {
+      @media screen and (max-width: $sm) {
+        width: 12rem;
+        // height: 70%;
+      }
+      @media screen and (max-width: $md) {
+        width: 70%;
+        height: 70%;
+      }
+      width: 30rem;
+      position: absolute;
+      bottom: 0;
+    }
+
     .cart2 {
+      @media screen and (max-width: $sm) {
+        transform: scale(0.7);
+        right: -2rem;
+        bottom: 0;
+      }
       position: absolute;
       bottom: 25%;
       right: 5%;
@@ -61,39 +136,17 @@
         justify-content: center;
       }
     }
-
-    img {
-      width: 30rem;
-      position: absolute;
-      bottom: 0;
-    }
   }
 
-  .h_sides {
+  .rightSide {
+    @media screen and (max-width: $md) {
+      grid-template-columns: 1fr 1fr;
+      justify-content: space-around;
+      margin-top: 1rem;
+    }
+    grid-area: right;
     display: grid;
     grid-template-rows: 1fr 1fr;
-
-    .text1 {
-      text-transform: uppercase;
-      font-size: 1.5rem;
-      width: min-content;
-      display: block;
-      font-weight: 600;
-    }
-    .text2 {
-      display: flex;
-      flex-direction: column;
-      width: min-content;
-      color: black;
-    }
-    .text2 > :first-child {
-      text-transform: capitalize;
-      font-weight: 800;
-      font-size: 2.5rem;
-    }
-    .text2 > :nth-child(2) {
-      display: block;
-    }
 
     .traffic {
       display: flex;
@@ -101,11 +154,20 @@
       text-align: right;
     }
     .traffic > :first-child {
+      @media screen and (max-width: $md) {
+        font-size: 1.5rem;
+        text-align: left;
+      }
+      display: block;
       font-weight: 800;
       font-size: 2.5rem;
     }
     .traffic > :nth-child(2) {
+      @media screen and (max-width: $md) {
+        text-align: left;
+      }
     }
+
     .customers {
       display: flex;
       flex-direction: column;
@@ -113,6 +175,11 @@
     }
 
     .customers > :first-child {
+      @media screen and (max-width: $md) {
+        font-size: 1.5rem;
+        text-align: right;
+      }
+      display: block;
       font-weight: 800;
       font-size: 2.5rem;
     }

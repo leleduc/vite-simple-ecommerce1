@@ -1,3 +1,5 @@
+@import '../../styles/contants.scss';
+
 .container {
   display: flex;
   flex-direction: column;
@@ -6,6 +8,10 @@
   padding: 4rem 2rem;
 
   .wrapper {
+    @media screen and (max-width: $sm) {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     align-items: flex-end;
@@ -29,11 +35,17 @@
     }
 
     img {
+      @media screen and (max-width: $sm) {
+        width: 80vw;
+      }
       width: 25rem;
       justify-self: center;
     }
   }
   .wrapper > :nth-child(3) {
+    @media screen and (max-width: $sm) {
+      text-align: center;
+    }
     text-align: right;
   }
 
@@ -72,7 +84,7 @@
           color: #7d7d7d;
           width: 80%;
           background: rbg(198, 198, 198);
-        //   border: none ;
+          //   border: none ;
         }
       }
       .testimonial > :nth-child(2) {

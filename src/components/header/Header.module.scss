@@ -1,6 +1,29 @@
+@import '../../styles/contants.scss';
+
 .container {
+  // position: fixed;
   padding: 1.5rem;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .bars {
+    @media screen and (max-width: $sm) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 20%;
+    cursor: pointer;
+
+    .barIcon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
 
   .logo {
     display: flex;
@@ -15,38 +38,59 @@
 
   .logo > span {
     font-weight: 600;
+    width: 8.5rem;
   }
 
-  .right {
+  .menuContainer {
+    @media screen and (max-width: $sm) {
+      position: absolute;
+      top: 3rem;
+      left: 2.5rem;
+      right: 0rem;
+      width: 8rem;
+    }
     display: flex;
-    gap: 2rem;
-    align-items: center; //theo chiều dọc
-    justify-content: center; //theo chiều ngang
+    margin-right: 2%;
+    .menu {
+      @media screen and (max-width: $sm) {
+        background: white;
 
-    .menuContainer {
-      .menu {
+        border-radius: 0.5rem;
         display: flex;
+        flex-direction: column;
+        margin-left: -2rem;
         gap: 2rem;
         font-weight: 500;
         list-style: none;
       }
+      display: flex;
+      gap: 2rem;
+      font-weight: 500;
+      list-style: none;
+    }
 
-      .menu > li:hover {
-        color: #fe956f;
-        cursor: pointer;
-      }
+    .menu > li:hover {
+      color: #fe956f;
+      cursor: pointer;
     }
-    .search {
-      width: 7rem;
-      height: 30%;
-      outline: none;
-      border: none;
-      border-radius: 5px;
-      padding: 0.5rem;
+  }
+
+  .search {
+    @media screen and (max-width: $md) {
+      display: none;
     }
-    .cart {
-      width: 1.5rem;
-      height: 1.5rem;
-    }
+    width: 7rem;
+    height: 30%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+
+    margin-right: 2%;
+    // gap: 2rem;
+  }
+  .cart {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
